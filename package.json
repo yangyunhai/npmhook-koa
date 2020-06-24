@@ -1,0 +1,44 @@
+{
+  "name": "npmhook-koa",
+  "version": "0.1.0",
+  "description": "npmhook",
+  "main": "app.js",
+  "scripts": {
+    "server": "cross-env NODE_ENV=development nodemon app.js",
+    "test": "cross-env NODE_ENV=test node app.js",
+    "start": "cross-env NODE_ENV=production node app.js",
+    "test:unit": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "ejs": "~2.5.5",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-mongo": "^1.9.1",
+    "koa-onerror": "^3.1.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.0.2",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.15",
+    "node-cache": "^5.1.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "sha1": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.1.1",
+    "cross-env": "^7.0.2",
+    "eslint": "3.18.0",
+    "nodemon": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangyunhai/npmhook-koa.git"
+  },
+  "author": "npmhook",
+  "license": "ISC"
+}

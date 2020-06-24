@@ -1,0 +1,6 @@
+{
+  "dev": false,
+  "env":"pro",
+  "host": "http://127.0.0.1",
+  "port": 4002
+}
