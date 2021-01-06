@@ -10,7 +10,7 @@
     "test:unit": "jest"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "ejs": "~2.5.5",
     "koa": "^2.11.0",
     "koa-body": "^4.1.1",
