@@ -2,11 +2,11 @@
   "name": "npmhook-koa",
   "version": "0.1.0",
   "description": "npmhook",
-  "main": "app.js",
+  "main": "sls.js",
   "scripts": {
-    "server": "cross-env NODE_ENV=development nodemon app.js",
-    "test": "cross-env NODE_ENV=test node app.js",
-    "start": "cross-env NODE_ENV=production node app.js",
+    "server": "cross-env NODE_ENV=development nodemon sls.js",
+    "test": "cross-env NODE_ENV=test node sls.js",
+    "start": "cross-env NODE_ENV=production node sls.js",
     "test:unit": "jest"
   },
   "dependencies": {
@@ -24,14 +24,16 @@
     "koa-views": "^6.0.2",
     "lodash": "^4.17.15",
     "mongoose": "^5.9.15",
+    "mysql": "^2.18.1",
     "node-cache": "^5.1.0",
+    "redis": "^3.0.2",
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "sha1": "^1.1.1"
   },
   "devDependencies": {
     "babel-eslint": "7.1.1",
-    "cross-env": "^7.0.2",
+    "cross-env": "^7.0.3",
     "eslint": "3.18.0",
     "nodemon": "^2.0.3"
   },

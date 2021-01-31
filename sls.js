@@ -6,10 +6,9 @@ const static = require('koa-static');
 const onerror = require('koa-onerror');
 const router = require('./router');
 const config = require('./config');
-const mongo = require('./middleware/mongo');
 const app = new Koa();
+const redis = require('./middleware/redis');
 //启动mongo连接  如果自己下载下来没有安装可以注释这个
-// mongo.startConnect();
 //注册公共请求头
 app.use(async (ctx, next)=> {
   ctx.set('Access-Control-Allow-Origin', '*');
@@ -59,5 +58,6 @@ app.on("error",(err, ctx)=>{
   `);
 }); 
 //开启监听
-app.listen(config.port);
 console.log(`+>+>+>+>+>+  服务启动成功，端口: ${config.port}, 当前环境为: ${config.env}  +>+>+>+>+>+`);
+// app.listen(config.port); //serverless规范
+module.exports = app;

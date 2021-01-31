@@ -1,0 +1,28 @@
+org: '1255584765'
+app: h5
+stage: prod
+component: koa
+name: koa-LVdk0Bkz6
+inputs:
+  src:
+    src: ./
+    exclude:
+      - .env
+      - node_modules/**
+  region: ap-shanghai
+  runtime: Nodejs10.15
+  apigatewayConf:
+    protocols:
+      - http
+      - https
+    environment: release
+    serviceTimeout: 60
+    autoCreateDns: false
+  isAutoCiDeploy: false
+  functionConf:
+    eip: false
+    timeout: 3
+    memorySize: 128
+  layers:
+    - name: '${output:${stage}:${app}:h5-layer.name}'
+      version: '${output:${stage}:${app}:h5-layer.version}'
