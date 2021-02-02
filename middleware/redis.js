@@ -21,7 +21,7 @@ const get = function (key) {
   });
 };
 
-const set = function (key, value,time=1800) {
+const set = function (key, value,time=60) {
     return new Promise((resolve, reject) => {
       client.set(key,value, function (err) {
         client.expire(key, time);
